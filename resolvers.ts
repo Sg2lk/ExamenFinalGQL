@@ -29,7 +29,7 @@ export const resolvers = {
         const phoneExists = await c.restaurantes.findOne({telefono: telefono});
         if(phoneExists) throw new GraphQLError("Phone already exists.");
         
-        const API_KEY = "ww1Ngh6Q2v8lqQpQmAd1jQ==Ssc2Vnkkal6v2Sv4";
+        const API_KEY = Deno.env.get("API_KEY");
         if(!API_KEY) throw new GraphQLError("API NINJA invalid");
         const url = `https://api.api-ninjas.com/v1/validatephone?number=${telefono}`;
         const data = await fetch(url, {
@@ -80,7 +80,7 @@ export const resolvers = {
 
       hora: async(parent: restauranteModel):Promise<string> => {
 
-        const API_KEY = "ww1Ngh6Q2v8lqQpQmAd1jQ==Ssc2Vnkkal6v2Sv4";
+        const API_KEY = Deno.env.get("API_KEY");
         if(!API_KEY) throw new GraphQLError("API NINJA invalid");
 
         const url1 = `https://api.api-ninjas.com/v1/geocoding?city=${parent.ciudad}&country=${parent.pais}`;
@@ -108,7 +108,7 @@ export const resolvers = {
 
       temperatura: async(parent: restauranteModel):Promise<string> => {
 
-        const API_KEY = "ww1Ngh6Q2v8lqQpQmAd1jQ==Ssc2Vnkkal6v2Sv4";
+        const API_KEY = Deno.env.get("API_KEY");
         if(!API_KEY) throw new GraphQLError("API NINJA invalid");
 
         const url1 = `https://api.api-ninjas.com/v1/geocoding?city=${parent.ciudad}&country=${parent.pais}`;
