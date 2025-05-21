@@ -93,8 +93,7 @@ Este proyecto es una API desarrollada con **GraphQL**, usando **Deno** y **Mongo
 
 ## ☁️ Despliegue
 
-- 🔗 [Enlace a la aplicación en Deno Deploy](https://tu-enlace.deno.dev)  
-- 📦 [Release del proyecto en GitHub](https://github.com/tuusuario/tu-repo/releases)
+- 🔗 [Enlace a la aplicación en Deno Deploy](https://examenfinalgql.deno.dev)  
 
 > El proyecto está completamente funcional y listo para pruebas o ampliaciones.
 
